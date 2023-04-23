@@ -6,7 +6,7 @@ import TodoList from './components/TodoList.jsx';
 function App() {
   const [loading, setLoading] = useState(true)
   const [itemList, setItemList] = useState()
-
+  console.log(itemList)
   return (
     <main>
       <h1>Much Todo</h1>

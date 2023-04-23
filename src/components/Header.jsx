@@ -1,20 +1,20 @@
 import { Input } from "antd"
 
-export default function ( {setItemList, setLoading} ) {
+export default function Header ( {setItemList, setLoading} ) {
   
   const handleAdd = async (value) => {
 
     if(value.length < 3) return 
 
-    
     setLoading(true)
+    
     const newItem = {
       done: false,
       userId: "me", 
       item: value, // what the user typed in is "value"
     }
     
-    const response = await fetch("http://127.0.0.1:5002/items", {
+    const response = await fetch("https://much-todo-api-iv.web.app/items", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -26,6 +26,7 @@ export default function ( {setItemList, setLoading} ) {
     setLoading(false)
   }
 
+  
 
 
 
@@ -40,3 +41,5 @@ export default function ( {setItemList, setLoading} ) {
     </header>
   )
 }
+
+
