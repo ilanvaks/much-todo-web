@@ -5,7 +5,7 @@ import TodoList from './components/TodoList.jsx';
 
 function App() {
   const [loading, setLoading] = useState(true)
-  const [itemList, setItemList] = useState()
+  const [itemList, setItemList] = useState([])
   console.log(itemList)
   return (
     <main>
@@ -14,7 +14,7 @@ function App() {
         <TodoList 
         loading={loading} 
         itemList={itemList} 
-        setItemList= {setItemList} 
+        setItemList={setItemList} 
         setLoading={setLoading}
       />
     </main>

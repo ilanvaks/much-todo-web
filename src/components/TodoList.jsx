@@ -4,7 +4,7 @@ import TodoDelete from "./TodoDelete.jsx"
 
 
 export default function TodoList ( {loading, itemList, setItemList, setLoading} ) {
-
+  
   useEffect(() => {
     fetch("https://much-todo-api-iv.web.app/items")
     .then(resp => resp.json())
@@ -28,6 +28,7 @@ export default function TodoList ( {loading, itemList, setItemList, setLoading} 
             <TodoDelete 
               taskId = {task.id}
               setItemList={setItemList}
+              itemList={itemList}
             />
           </List.Item>
         )}
